@@ -1,4 +1,4 @@
-package com.totvs.msmigracaopsdc.api.domain.dto;
+package com.totvs.msmigracaopsdc.api.dto;
 
 import java.time.LocalDate;
 
@@ -13,7 +13,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class MigracaoDTO {
 
-	private String cpf;
-	private String nome;
-	private LocalDate dtNascimento;
+	private String codCpfCnpj;
+	private LocalDate dtInclusao;
+	private Long numSequencial;
+	private String tpOrigem;
+	private String numContrato;
 }

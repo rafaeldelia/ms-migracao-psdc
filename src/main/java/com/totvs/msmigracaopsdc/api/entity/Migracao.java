@@ -1,25 +1,51 @@
-package com.totvs.msmigracaopsdc.api.model;
+package com.totvs.msmigracaopsdc.api.entity;
 
+import java.io.Serializable;
 import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-//@Entity
+@Entity
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-//@Table(name = "tab_cartao")
-public class SccPsdcMigracao {
+@IdClass(MigracaoId.class)
+@Table(name = "SCC_PSDC_INTEGRACAO")
+public class Migracao implements Serializable{
 
+	private static final long serialVersionUID = 7654085082009185461L;
+
+	@Id
+	@Column(name = "COD_CPF_CNPJ", unique = false, nullable = false)
 	private String codCpfCnpj;
+
+	@Id
+	@Column(name = "DT_INCLUSAO", unique = false, nullable = false)
 	private LocalDate dtInclusao;
+
+	@Id
+	@Column(name = "NUM_SEQUENCIAL", unique = false, nullable = false)
 	private Long numSequencial;
+
+	@Id
+	@Column(name = "TP_ORIGEM", unique = false, nullable = false)
 	private String tpOrigem;
+
+	@Id
+	@Column(name = "NUM_CONTRATO", unique = false, nullable = false)
 	private String numContrato;
+    
+    /*
 	private String stProcessamento;
 	private String flEnvioTratamento;
 	private String nomCliente;
@@ -157,5 +183,5 @@ public class SccPsdcMigracao {
 	private String flAltDddTelReferencia;
 	private String flAltNumTelReferencia;
 	private String flAltDddCelular;
-	private String flAltNumCelular;
+	private String flAltNumCelular; */
 }

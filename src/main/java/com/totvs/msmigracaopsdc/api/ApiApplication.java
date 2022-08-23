@@ -2,13 +2,10 @@ package com.totvs.msmigracaopsdc.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * Classe principal de starter com configuração de CORS
@@ -16,8 +13,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @author rsdelia
  *
  */
-@EnableSwagger2
-@SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
+@SpringBootApplication
 public class ApiApplication {
 
 	public static void main(String[] args) {
