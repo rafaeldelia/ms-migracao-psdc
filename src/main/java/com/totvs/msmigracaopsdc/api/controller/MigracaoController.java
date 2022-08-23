@@ -25,7 +25,7 @@ public class MigracaoController {
 	@GetMapping("/executarMigracao/{cpf}")
 	public MultipleMigracaoResponseMessage executarMigracao(@PathVariable("cpf") String cpf) {
 		try {
-			List<MigracaoDTO> migracoes = service.executarMigracao(cpf);
+			List<MigracaoDTO> migracoes = service.executarMigracao();
 			return MultipleMigracaoResponseMessage.builder().status(200).data(migracoes).build();
 		} catch (Exception ex) {
 			log.error("Erro ao buscar Migrações pendentes!", ex);
