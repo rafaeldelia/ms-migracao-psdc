@@ -1,4 +1,4 @@
-package br.com.totvs.msmigracaopsdc.api.config;
+package com.totvs.msmigracaopsdc.api.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

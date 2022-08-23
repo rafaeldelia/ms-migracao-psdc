@@ -1,4 +1,4 @@
-package br.com.totvs.msmigracaopsdc.api.domain.dto;
+package com.totvs.msmigracaopsdc.api.domain.dto;
 
 import java.time.LocalDate;
 

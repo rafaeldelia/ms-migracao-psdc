@@ -1,4 +1,4 @@
-package br.com.totvs.msmigracaopsdc.api.controller;
+package com.totvs.msmigracaopsdc.api.controller;
 
 import java.time.LocalDate;
 
@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.totvs.msmigracaopsdc.api.domain.dto.MigracaoDTO;
+import com.totvs.msmigracaopsdc.api.domain.dto.MigracaoDTO;
+
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
